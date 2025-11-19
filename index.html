@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Currículum – Enrique Barahona García</title>
+  <style>
+    :root{
+      --bg: #0f1217;
+      --card: #141923;
+      --accent: #4f7cff;
+      --text: #e8ecf1;
+      --muted: #a9b3c1;
+      --line: #253046;
+      --chip: #1c2330;
+      --good: #3bd67c;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+    a { color: var(--accent); text-decoration: none; }
+    .wrap { max-width: 980px; margin: 40px auto; padding: 0 20px; }
+
+    /* Header / Name */
+    .header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+    .name {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+    .role {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* Top bar (Contacto + Habilidades) */
+    .top {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+    }
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      background: var(--chip);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .bullet {
+      width: 8px; height: 8px; border-radius: 999px;
+      background: var(--accent);
+      flex: 0 0 auto;
+    }
+    .skills .item .bullet { background: var(--good); }
+
+    /* Sections grid */
+    .grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
+    }
+
+    /* Section cards */
+    .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 16px;
+    }
+    .section h3 {
+      margin: 0 0 12px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+    .muted { color: var(--muted); }
+    .para { margin: 6px 0 0; line-height: 1.55; color: var(--text); }
+
+    /* Timeline / entries */
+    .entry {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4px 12px;
+      padding: 12px 12px;
+      border: 1px dashed var(--line);
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+    .entry .title {
+      font-weight: 700;
+    }
+    .entry .time {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Tables */
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+    .table th, .table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    .table tr:last-child th,
+    .table tr:last-child td { border-bottom: none; }
+    .table th {
+      background: #182031;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+    }
+
+    /* Chips row */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .chip {
+      background: var(--chip);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-size: 0.9rem;
+      padding: 8px 12px;
+      border-radius: 999px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .top, .grid { grid-template-columns: 1fr; }
+      .header { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- Encabezado -->
+    <div class="header">
+      <div>
+        <div class="name">Enrique Barahona García</div>
+        <div class="role">Técnico en sistemas microinformáticos</div>
+      </div>
+    </div>
+
+    <!-- Contacto + Habilidades -->
+    <div class="top">
+      <div class="card">
+        <h2>Contacto</h2>
+        <div class="list">
+          <div class="item"><span class="bullet"></span> 911-234-567</div>
+          <div class="item"><span class="bullet"></span> EnriqueBG@gmail.es</div>
+          <div class="item"><span class="bullet"></span> Guadalajara</div>
+        </div>
+      </div>
+
+      <div class="card skills">
+        <h2>Habilidades</h2>
+        <div class="list">
+          <div class="item"><span class="bullet"></span> Paciente</div>
+          <div class="item"><span class="bullet"></span> Perfeccionista</div>
+          <div class="item"><span class="bullet"></span> Resolutivo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="grid">
+      <!-- Columna izquierda -->
+      <div>
+        <div class="section">
+          <h3>Mi perfil</h3>
+          <p class="para">
+            Soy un técnico titulado con un año de experiencia. Sé desmontar y montar cualquier equipo, además de darles mantenimiento.
+          </p>
+          <p class="para">
+            Sé trabajar en equipo y no me frustro con facilidad.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>Experiencia</h3>
+          <div class="entry">
+            <div class="title">Prácticas — Soto y Ochoa</div>
+            <div class="time">(2025)</div>
+            <div class="para" style="grid-column: 1 / -1;">
+              Prácticas en una tienda de informática durante 3 meses, con muy buenas valoraciones.
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Formación</h3>
+          <div class="entry">
+            <div class="title">Brianda de Mendoza</div>
+            <div class="time">(2023 – 2026)</div>
+            <div class="para" style="grid-column: 1 / -1;">
+              Ciclo grado medio SMR
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna derecha -->
+      <div>
+        <div class="section">
+          <h3>Herramientas</h3>
+          <table class="table">
+            <tr>
+              <th>Máquinas virtuales</th>
+              <th>Word</th>
+            </tr>
+            <tr>
+              <td>Hojas de cálculo</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="section">
+          <h3>Idiomas</h3>
+          <table class="table">
+            <tr>
+              <th>Español</th>
+              <th>Nativo</th>
+            </tr>
+            <tr>
+              <td>Inglés</td>
+              <td>Nivel medio</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Extras visuales opcionales -->
+    <div class="section" style="margin-top: 16px;">
+      <h3>Resumen de competencias</h3>
+      <div class="chips">
+        <span class="chip">Montaje y mantenimiento</span>
+        <span class="chip">Trabajo en equipo</span>
+        <span class="chip">Atención al detalle</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
